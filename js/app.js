@@ -16,11 +16,12 @@ function alterarStatus(id){
     }quatidadeDeJogosAlugados();
 }
 function quatidadeDeJogosAlugados() {
-    let jogosALugados = document.querySelectorAll('.dashboard__item__img--rented');
-    let quantidade = jogosALugados.length;
+    // Seleciona todos os jogos alugados
+    let jogosALugados = document.querySelectorAll('.dashboard__item__img--rented'); 
+    let quantidade = jogosALugados.length; // Conta a quantidade de jogos alugados
     console.log(`Quantidade de jogos alugados: ${quantidade}`);
     document.querySelector('h1').textContent = `Jogos Alugados: ${quantidade}`;
     if (quantidade == 0){
-        document.querySelector('h1').textContent = 'Aluguel de boardgames';
+        document.querySelector('h1').textContent = 'Aluguel de boardgames'; //Se não houver jogos alugados, exibe mensagem padrão;
     }
 }
